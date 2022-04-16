@@ -1,23 +1,36 @@
 import logo from './logo.svg';
 import './App.css';
+import { Route, Routes } from 'react-router-dom';
+
+import Header from './Components/Shared/Header/Header';
+import Footer from './Components/Shared/Footer/Footer';
+import Banner from './Components/Pages/Home/Banner/Banner';
+import Login from './Components/Pages/Login/Login';
+import Landing from './Components/Pages/Home/Landing/Landing';
+import BreakFast from './Components/Pages/Home/Main/BreakFast/BreakFast';
+import Lunch from './Components/Pages/Home/Main/Lunch/Lunch';
+import Dinner from './Components/Pages/Home/Main/Dinner/Dinner';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <Routes>
+
+        <Route path='/' element={<Landing />}>
+          <Route path='breakfast' element={<BreakFast />}></Route>
+          <Route path='lunch' element={<Lunch />}></Route>
+          <Route path='dinner' element={<Dinner />}></Route>
+        </Route>
+
+        <Route path='/login' element={<Login />} />
+        <Route path='/footer' element={<Footer />} />
+        <Route path='/header' element={<Header />} />
+
+
+
+      </Routes>
+      <Footer />
     </div>
   );
 }

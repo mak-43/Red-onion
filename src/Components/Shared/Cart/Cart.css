@@ -1,0 +1,13 @@
+.cart {
+    height: 400px;
+    width: 350px;
+    
+}
+.cart:hover{
+ 
+
+    border-radius: 18px;
+    background: #e8e7e9;
+    box-shadow: 29px 29px 59px #cac9cb,
+        -29px -29px 59px #ffffff;
+}
