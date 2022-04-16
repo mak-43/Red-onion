@@ -10,7 +10,7 @@ import Lunch from '../Main/Lunch/Lunch';
 
 const Landing = () => {
     return (
-        <div>
+        <div className='relative'>
             
             <Banner/>
             <div className='flex justify-center gap-8 py-5 text-xl font-semibold'>
@@ -22,7 +22,7 @@ const Landing = () => {
                 <Outlet></Outlet>
                 <button className=' mt-8 px-5 py-3 bg-gray-300 text-white rounded-3xl hover:text-black'>Checkout Your Food</button>
             </div>
-            
+
             <Artcle/>
         </div>
     );

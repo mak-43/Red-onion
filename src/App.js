@@ -10,6 +10,7 @@ import Landing from './Components/Pages/Home/Landing/Landing';
 import BreakFast from './Components/Pages/Home/Main/BreakFast/BreakFast';
 import Lunch from './Components/Pages/Home/Main/Lunch/Lunch';
 import Dinner from './Components/Pages/Home/Main/Dinner/Dinner';
+import Register from './Components/Pages/Register/Register';
 
 function App() {
   return (
@@ -22,7 +23,7 @@ function App() {
           <Route path='lunch' element={<Lunch />}></Route>
           <Route path='dinner' element={<Dinner />}></Route>
         </Route>
-
+          <Route path='/register' element={<Register/>}></Route>
         <Route path='/login' element={<Login />} />
         <Route path='/footer' element={<Footer />} />
         <Route path='/header' element={<Header />} />
